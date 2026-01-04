@@ -261,10 +261,13 @@ body {
 }
 
 .details-text {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  margin-top: 15px;
+  white-space: pre-line;
+  font-size: 0.85rem; /* Slightly smaller for dense content */
+  line-height: 1.4;
+  text-align: left; /* Better for bullet points */
+  margin-top: 10px;
   color: #f0f0f0;
+  padding: 0 10px;
 }
 
 /* --- SKILLS SECTION --- */
@@ -348,6 +351,184 @@ body {
   cursor: default;
 }
 
+/* --- CONTACT SECTION --- */
+.contact-section {
+  padding: 80px 10% 40px;
+  position: relative;
+  background-image: linear-gradient(180deg,
+      rgba(45, 10, 55, 0.6) 0%,
+      rgba(15, 15, 15, 0.85) 50%,
+      rgba(0, 0, 0, 0.95) 100%),
+    url('./assets/page2-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.contact-glass-card {
+  background: rgba(104, 33, 122, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(167, 107, 255, 0.2);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.contact-intro {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  background: rgba(167, 107, 255, 0.2);
+  border-color: #A76BFF;
+  transform: translateX(10px);
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+}
+
+.contact-info {
+  text-align: left;
+}
+
+.contact-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #A76BFF;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.contact-value {
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.simple-footer {
+  margin-top: 80px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* --- NAVBAR CONTAINER --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  /* Fixed height for consistency */
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2000;
+  /* Stays on top of everything */
+
+  /* HIGH VISIBILITY BACKGROUND:
+     Deep purple-black with high opacity and blur 
+     to separate it from the content behind it. */
+  background: rgba(15, 8, 20, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  /* Glowing bottom separator */
+  border-bottom: 1px solid rgba(167, 107, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+/* THE FIX: Pushes the website content down so it doesn't hide behind the bar */
+.main-wrapper {
+  padding-top: 80px;
+}
+
+/* LOGO STYLING */
+.nav-logo {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #ffffff, #A76BFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* LINKS LIST */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* HOVER EFFECTS */
+.nav-links a:hover {
+  color: #A76BFF;
+}
+
+/* Subtle underline effect on hover */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #A76BFF;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 8px #A76BFF;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
 /* --- RESPONSIVE --- */
 @media (max-width: 900px) {
   .app-container {
@@ -375,5 +556,17 @@ body {
   .experience-grid {
     padding: 0 10px;
     gap: 30px;
+  }
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
   }
 }

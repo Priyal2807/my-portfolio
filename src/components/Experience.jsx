@@ -4,25 +4,36 @@ import flipIconImg from '../assets/flip-icon.png'; // Make sure this file exists
 
 const experiences = [
     {
-        role: "Senior Researcher",
-        company: "Tech Institute",
-        period: "2022 - Present",
-        desc: "Leading AI research focused on neural networks.",
-        details: "Published 3 papers in IEEE, managed a team of 5 researchers, and optimized model training time by 40%."
+        role: "Consultant", // or your specific role
+        company: "Capgemini",
+        period: "2025 - Present",
+        desc: "Specialized in enterprise-scale Azure cloud integrations.",
+        details: `• Integrated D365, SFTP, SharePoint & CosmosDB via Logic Apps & Azure C# functions
+• Secured APIs with OAuth/JWT policies in Azure APIM
+• Streamlined CI/CD and version control via Azure DevOps
+• Implemented Cloud Security using Key Vault & RBAC
+• Accelerated workflows with Azure OpenAI & Copilot
+• Collaborated on containerization initiatives, learning Docker and Kubernetes (K8s) concepts.`
     },
     {
-        role: "Junior Developer",
-        company: "Software Hub",
-        period: "2020 - 2022",
-        desc: "Developed full-stack applications using React.",
-        details: "Built 12+ client projects, migrated legacy code to modern React, and improved lighthouse scores by 20%."
+        role: "IT Analyst", // or your specific role
+        company: "Tata Consultancy Services",
+        period: "2020 - 2025",
+        desc: "Specialized in enterprise-scale Azure cloud integrations.",
+        details: `• Built 50+ Azure Integrations (Logic Apps, APIM, ADF) connecting systems like SAP & CRM.
+• Designed ETL pipelines for SQL & Data Lake with full/delta load strategies.
+• Reduced API errors by 35% via optimized APIM caching and rate-limiting.
+• Automated ARM deployments using YAML DevOps pipelines & PowerShell.
+• Developed C# Functions for encryption/decryption and zipping of files.
+• Worked with dotliquid templates for JSON mapping.
+• Managed Cloud Stack: Logic Apps (Standard), KQL, Key Vault, and Synapse.`
     },
     {
-        role: "Data Analyst Intern",
-        company: "Insights Corp",
-        period: "2019 - 2020",
-        desc: "Analyzed consumer behavior patterns.",
-        details: "Created automated Python scripts for data cleaning and visualized trends using D3.js and Tableau."
+        role: "Software Engineer Intern",
+        company: "Ministry of Electronics & IT, Govt. of India",
+        period: "June 2019 - Sept 2019",
+        desc: "Developed full-stack applications using HTML, CSS, JavaScript, and Spring Boot.",
+        details: "Worked on the frontend design of the company website using jQuery, HTML, JS, CSS for the same. Worked on the backend system of the website by populating the data from the backend to the frontend using Java, JSP and Servlets for the same"
     }
 ];
 
