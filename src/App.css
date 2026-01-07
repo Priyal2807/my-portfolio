@@ -196,10 +196,9 @@ body {
 }
 
 .front {
-  background: linear-gradient(135deg,
-      rgba(104, 33, 122, 0.25) 0%,
-      rgba(30, 30, 30, 0.85) 100%);
-  backdrop-filter: blur(12px);
+  background: rgba(104, 33, 122, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(167, 107, 255, 0.2);
   -webkit-backdrop-filter: blur(12px);
   color: white;
   text-align: center;
@@ -262,9 +261,11 @@ body {
 
 .details-text {
   white-space: pre-line;
-  font-size: 0.85rem; /* Slightly smaller for dense content */
+  font-size: 0.85rem;
+  /* Slightly smaller for dense content */
   line-height: 1.4;
-  text-align: left; /* Better for bullet points */
+  text-align: left;
+  /* Better for bullet points */
   margin-top: 10px;
   color: #f0f0f0;
   padding: 0 10px;
@@ -298,11 +299,9 @@ body {
 .skill-category-card {
   flex: 1;
   min-width: 300px;
-  background: linear-gradient(135deg,
-      rgba(104, 33, 122, 0.25) 0%,
-      rgba(30, 30, 30, 0.85) 100%);
-  /* Theme Purple tint */
+  background: rgba(104, 33, 122, 0.1);
   backdrop-filter: blur(10px);
+  border: 1px solid rgba(167, 107, 255, 0.2);
   border: 1px solid rgba(167, 107, 255, 0.2);
   border-radius: 16px;
   padding: 40px;
@@ -491,7 +490,8 @@ body {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 40px;
+  gap: 20px;
+  /* Reduced gap from 40px to 20px to fit more links */
   margin: 0;
   padding: 0;
 }
@@ -499,10 +499,10 @@ body {
 .nav-links a {
   color: #e0e0e0;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
   transition: all 0.3s ease;
   position: relative;
 }
@@ -527,6 +527,142 @@ body {
 
 .nav-links a:hover::after {
   width: 100%;
+}
+
+/* --- UNIVERSAL SECTION PADDING --- */
+.section {
+  padding: 80px 10%;
+  position: relative;
+  background-image: linear-gradient(180deg,
+      rgba(45, 10, 55, 0.6) 0%,
+      rgba(15, 15, 15, 0.85) 50%,
+      rgba(0, 0, 0, 0.95) 100%),
+    url('./assets/page2-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* --- EDUCATION --- */
+.edu-container {
+  max-width: 900px;
+  margin: 0 auto;
+  border-left: 2px solid rgba(167, 107, 255, 0.3);
+  padding-left: 30px;
+}
+
+.edu-card {
+  background: linear-gradient(135deg, rgba(104, 33, 122, 0.25) 0%, rgba(30, 30, 30, 0.85) 100%);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.edu-dot {
+  position: absolute;
+  left: -41px;
+  top: 30px;
+  width: 20px;
+  height: 20px;
+  background: #A76BFF;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #A76BFF;
+}
+
+.pub-grid {
+  display: grid;
+  /* Keeps cards in 3 columns on desktop, 1 on mobile */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  /* This ensures all items in a row have the same height */
+  align-items: stretch;
+}
+
+.pub-card-link {
+  text-decoration: none;
+  display: flex;
+  /* Makes the anchor tag take full height of the grid cell */
+}
+
+.pub-card {
+  background: rgba(104, 33, 122, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(167, 107, 255, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  /* Use flexbox to organize the inside of the card */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pub-image {
+  height: 200px;
+  min-height: 200px;
+  /* Prevents image from shrinking */
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.pub-content {
+  padding: 20px;
+  /* This tells the content area to grow and fill all available space */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Pushes 'Read More' to the very bottom */
+}
+
+.pub-content h3 {
+  margin: 10px 0 20px 0;
+  min-height: 3em;
+  /* Optional: Ensures at least 2 lines worth of space for titles */
+}
+
+.pub-journal {
+  color: #A76BFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* --- CERTIFICATIONS WALL --- */
+.cert-wall {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+.cert-badge:hover {
+  border-color: #A76BFF;
+  background: rgba(167, 107, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.ms-box {
+  width: 12px;
+  height: 12px;
+  background: #00a4ef;
+  box-shadow: 0 0 5px #00a4ef;
 }
 
 /* --- RESPONSIVE --- */
@@ -563,10 +699,10 @@ body {
   }
 
   .nav-links {
-    gap: 20px;
+    gap: 12px;
   }
 
   .nav-links a {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 }
