@@ -6,7 +6,7 @@ const experiences = [
     {
         role: "Consultant", // or your specific role
         company: "Capgemini",
-        period: "2025 - Present",
+        period: "Feb 2025 - Present",
         desc: "Specialized in enterprise-scale Azure cloud integrations.",
         details: `• Integrated D365, SFTP, SharePoint & CosmosDB via Logic Apps & Azure C# functions
 • Secured APIs with OAuth/JWT policies in Azure APIM
@@ -18,7 +18,7 @@ const experiences = [
     {
         role: "IT Analyst", // or your specific role
         company: "Tata Consultancy Services",
-        period: "2020 - 2025",
+        period: "Aug 2020 - Feb 2025",
         desc: "Specialized in enterprise-scale Azure cloud integrations.",
         details: `• Built 50+ Azure Integrations (Logic Apps, APIM, ADF) connecting systems like SAP & CRM.
 • Designed ETL pipelines for SQL & Data Lake with full/delta load strategies.
